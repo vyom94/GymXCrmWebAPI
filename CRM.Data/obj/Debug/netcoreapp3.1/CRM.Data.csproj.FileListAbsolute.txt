@@ -11,3 +11,5 @@ C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Data\bin\Debug\netcoreapp3
 C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Data\obj\Debug\netcoreapp3.1\CRM.Data.csproj.CopyComplete
 C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Data\obj\Debug\netcoreapp3.1\CRM.Data.dll
 C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Data\obj\Debug\netcoreapp3.1\CRM.Data.pdb
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Data\bin\Debug\netcoreapp3.1\CRM.Models.dll
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Data\bin\Debug\netcoreapp3.1\CRM.Models.pdb
