@@ -1,0 +1,7 @@
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\net5.0\GymXCrmAPI.csproj.AssemblyReference.cache
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\net5.0\GymXCrmAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\net5.0\GymXCrmAPI.AssemblyInfoInputs.cache
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\net5.0\GymXCrmAPI.AssemblyInfo.cs
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\net5.0\GymXCrmAPI.csproj.CoreCompileInputs.cache
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\net5.0\GymXCrmAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\net5.0\GymXCrmAPI.MvcApplicationPartsAssemblyInfo.cache
