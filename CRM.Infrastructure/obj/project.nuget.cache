@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "NLckT6K4Ql5b24XJTTntrDl3WsgIl4ZCq2f6kGDM20SG2oXF9zHn+fwb4JzoO2wJdbCcvsGRM5TZpLZmK4oOow==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\powerserv\\Documents\\GitHub\\GymXCrmWebAPI\\CRM.Infrastructure\\CRM.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\powerserv\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.16\\microsoft.extensions.configuration.3.1.16.nupkg.sha512",
+    "C:\\Users\\powerserv\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.16\\microsoft.extensions.configuration.abstractions.3.1.16.nupkg.sha512",
+    "C:\\Users\\powerserv\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.16\\microsoft.extensions.configuration.binder.3.1.16.nupkg.sha512",
+    "C:\\Users\\powerserv\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.16\\microsoft.extensions.dependencyinjection.3.1.16.nupkg.sha512",
+    "C:\\Users\\powerserv\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.16\\microsoft.extensions.dependencyinjection.abstractions.3.1.16.nupkg.sha512",
+    "C:\\Users\\powerserv\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.16\\microsoft.extensions.primitives.3.1.16.nupkg.sha512"
+  ],
+  "logs": []
+}

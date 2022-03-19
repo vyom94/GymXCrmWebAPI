@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using CRM.Data.Repository;
+using CRM.Infrastructure.Settings;
 using GymXCrmAPI.Handler;
 using GymXCrmAPI.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -11,6 +13,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,9 +27,10 @@ namespace GymXCrmAPI
     {
         public Startup(IConfiguration configuration)
         {
+            Settings = new Settings(configuration);
             Configuration = configuration;
         }
-
+        public ISettings Settings { get; set; }
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -39,6 +43,7 @@ namespace GymXCrmAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GymXCrmAPI", Version = "v1" });
             });
 
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Settings.ConnectionString.GymXCrmDB));
             services.AddCors(options =>
             {
                 options.AddPolicy(name: "CorsPolicy",

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Kl+iJVzOtYKvNPgwQ0zt3OtKQ48Da29IR/Dz/QA5iOnxWNJqYVkaE2XLbcdJvIGumEoeEcqiBIfTZJeoBwd/kg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\powerserv\\Documents\\GitHub\\GymXCrmWebAPI\\CRM.Models\\CRM.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\powerserv\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

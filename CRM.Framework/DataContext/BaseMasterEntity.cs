@@ -5,10 +5,10 @@ using System.Text;
 
 namespace CRM.Framework.DataContext
 {
-    public abstract class BaseEntity : IObjectState
+
+   public abstract class BaseMasterEntity : IObjectState
     {
         public int Id { get; set; }
-        public long CompanyId { get; set; }
         public bool Active { get; set; }
         public bool Deleted { get; set; }
         public int CreatedBy { get; set; }
@@ -22,11 +22,9 @@ namespace CRM.Framework.DataContext
         public ObjectState ObjectState { get; set; }
     }
 
-    public abstract class BaseEntityState : IObjectState
+    public abstract class BaseMasterEntityState : IObjectState
     {
         [NotMapped]
         public ObjectState ObjectState { get; set; }
     }
-
-
 }
