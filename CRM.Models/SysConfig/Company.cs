@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CRM.Models.SysConfig
 {
-    public class Company: BaseMasterEntity
+    public class Company: BaseEntity
     {
         public string CompanyName { get; set; }
         public string Email { get; set; }

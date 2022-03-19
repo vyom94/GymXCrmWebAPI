@@ -40,6 +40,8 @@ namespace CRM.Data.Extensions
             //  .Select(it => (et: it.i.GetGenericArguments()[0], cfgObj: Activator.CreateInstance(it.t)))
             //  .Select(it => applyConfigurationMethodInfo.MakeGenericMethod(it.et).Invoke(modelBuilder, new[] { it.cfgObj }))
             //  .ToList();
+
+   
         }
     }
 }

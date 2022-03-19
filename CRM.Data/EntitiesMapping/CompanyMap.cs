@@ -7,7 +7,7 @@ using System.Text;
 
 namespace CRM.Data.EntitiesMapping
 {
-    public class CompanyMap : BaseMasterEntityConfiguration<Company>
+    public class CompanyMap : BaseEntityConfiguration<Company>
     {
         public override void Configure(EntityTypeBuilder<Company> builder)
         {

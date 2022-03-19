@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using CRM.Data.Repository;
+using CRM.Framework.Repositories;
 using CRM.Infrastructure.Settings;
 using GymXCrmAPI.Handler;
 using GymXCrmAPI.Middleware;
@@ -78,7 +79,7 @@ namespace GymXCrmAPI
 
 
             services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
-
+            
             //services.AddControllers()
             //   .AddNewtonsoftJson(options =>
             //   {
