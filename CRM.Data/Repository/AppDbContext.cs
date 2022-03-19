@@ -1,4 +1,5 @@
-﻿using CRM.Framework.DataContext;
+﻿using CRM.Data.Extensions;
+using CRM.Framework.DataContext;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace CRM.Data.Repository
             {
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
-
+            builder.ApplyAllConfigurations();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
