@@ -25,17 +25,7 @@ namespace CRM.Data.Repository
             }
 
             builder.ApplyAllConfigurations();
- //           var mapLists = Assembly.GetExecutingAssembly().GetTypes()
- //.Where(type => !string.IsNullOrWhiteSpace(type.Namespace)
- //    && typeof(IEntityTypeConfiguration<>).IsAssignableFrom(type)
- //    && type.IsGenericType == false
- //    && type.IsClass).ToList();
 
- //           foreach (var item in mapLists)
- //           {
- //               Activator.CreateInstance(item, BindingFlags.Public |
- //               BindingFlags.Instance, null, new object[] { builder }, null);
- //           }
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

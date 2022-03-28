@@ -1,4 +1,5 @@
-﻿using CRM.Framework.Services;
+﻿using CRM.Framework.Repositories;
+using CRM.Framework.Services;
 using CRM.Models.ApiResponseModel;
 using CRM.Models.User;
 using Microsoft.AspNetCore.Http;
@@ -12,18 +13,19 @@ namespace GymXCrmAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RegisterController : ControllerBase
+    public class RegisterController : BaseApiController
     {
-        private IService<Users> userService;
-        public RegisterController()
+        private readonly IGenericRepository<Users> _userService;
+        public RegisterController(IGenericRepository<Users> userService)
         {
-            
+            _userService =userService;
         }
         [HttpGet]
-
+       
         public IResult isRgistered()
         {
-            return null;
+            _result.ResultData = false;
+            return _result;
         }
     }
 }

@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymXCrmAPI", "GymXCrmAPI.csproj", "{16DF3E81-B54D-4137-965D-37BE801B10A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Data", "..\CRM.Data\CRM.Data.csproj", "{D6C92FD4-E79B-43B5-A349-4E4E3894D5ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM.Data", "..\CRM.Data\CRM.Data.csproj", "{D6C92FD4-E79B-43B5-A349-4E4E3894D5ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Framework", "..\CRM.Framework\CRM.Framework.csproj", "{54828886-EC8C-49D4-82EE-5541E1D5749F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM.Framework", "..\CRM.Framework\CRM.Framework.csproj", "{54828886-EC8C-49D4-82EE-5541E1D5749F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Models", "..\CRM.Models\CRM.Models.csproj", "{7916D817-725D-45E4-B31A-9DB9C79BC6F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM.Models", "..\CRM.Models\CRM.Models.csproj", "{7916D817-725D-45E4-B31A-9DB9C79BC6F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Infrastructure", "..\CRM.Infrastructure\CRM.Infrastructure.csproj", "{710ED022-9DFC-4300-8B90-4F5A0D439DD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM.Infrastructure", "..\CRM.Infrastructure\CRM.Infrastructure.csproj", "{710ED022-9DFC-4300-8B90-4F5A0D439DD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Core", "..\CRM.Core\CRM.Core.csproj", "{775FD963-BD7F-44CB-91D3-7AF4B4D6286B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{710ED022-9DFC-4300-8B90-4F5A0D439DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{710ED022-9DFC-4300-8B90-4F5A0D439DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{710ED022-9DFC-4300-8B90-4F5A0D439DD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775FD963-BD7F-44CB-91D3-7AF4B4D6286B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775FD963-BD7F-44CB-91D3-7AF4B4D6286B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775FD963-BD7F-44CB-91D3-7AF4B4D6286B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775FD963-BD7F-44CB-91D3-7AF4B4D6286B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
