@@ -204,25 +204,21 @@ namespace CRM.Data.Repository
             return _dbSet.AsNoTracking();
         }
 
-        public IQueryableEntity<TEntity> Query()
-        {
-            return new QueryableEntity<TEntity>(this);
-        }
+        //public IQueryableEntity<TEntity> Query()
+        //{
+        //    return new QueryableEntity<TEntity>(this);
+        //}
 
-        public virtual IQueryableEntity<TEntity> Query(Expression<Func<TEntity, bool>> predicate)
-        {
-            return new QueryableEntity<TEntity>(this, predicate);
-        }
+        //public virtual IQueryableEntity<TEntity> Query(Expression<Func<TEntity, bool>> predicate)
+        //{
+        //    return new QueryableEntity<TEntity>(this, predicate);
+        //}
 
-        public virtual IQueryableEntity<TEntity> Query(IQueryObject<TEntity> queryObject)
-        {
-            return new QueryableEntity<TEntity>(this, queryObject);
-        }
+        //public virtual IQueryableEntity<TEntity> Query(IQueryObject<TEntity> queryObject)
+        //{
+        //    return new QueryableEntity<TEntity>(this, queryObject);
+        //}
 
-        public IGenericRepository<T> GetRepository<T>() where T : class, IObjectState
-        {
-            return _unitOfWork.Repository<T>();
-        }
 
         public IQueryable<TEntity> SelectQuery(string query, params object[] parameters)
         {
@@ -249,6 +245,21 @@ namespace CRM.Data.Repository
             throw new NotImplementedException();
         }
 
+        public IQueryableEntity<TEntity> Query()
+        {
+            return new QueryableEntity<TEntity>(this);
+        }
+
+        public IQueryableEntity<TEntity> Query(Expression<Func<TEntity, bool>> predicate)
+        {
+            return new QueryableEntity<TEntity>(this, predicate);
+        }
+
+        public IQueryableEntity<TEntity> Query(IQueryObject<TEntity> queryObject)
+        {
+            return new QueryableEntity<TEntity>(this, queryObject);
+        }
+
         //public IQueryable<T> RawQuery<T>(string query, params object[] parameters)
         //{
         //    return _context.SQLQuery<T>(query, parameters).AsQueryable();
@@ -268,6 +279,10 @@ namespace CRM.Data.Repository
         //{
         //    return _context.ExecuteCommand(query, parameters);
         //}
+        public IDataContext Context
+        {
+            get { return _context; }
+        }
 
     }
 }

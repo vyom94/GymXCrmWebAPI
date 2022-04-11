@@ -6,13 +6,12 @@ using System.Text;
 
 namespace CRM.Framework.UnitOfWork
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork 
     {
         int SaveChanges();
-        void BeginTransaction();
-        void Commit();
-        void Rollback();
-        IGenericRepository<TEntity> Repository<TEntity>() where TEntity : class, IObjectState;
         IDataContext Context { get; }
+
+        IGenericRepository<TEntity> Repository<TEntity>() where TEntity : class, IObjectState;
+
     }
 }

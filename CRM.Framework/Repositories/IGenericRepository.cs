@@ -29,6 +29,5 @@ namespace CRM.Framework.Repositories
         void Delete(TEntity entity);
         void Delete(object id);
         void DeleteRange(Expression<Func<TEntity, bool>> predicate);
-        IGenericRepository<T> GetRepository<T>() where T : class, IObjectState;
     }
 }

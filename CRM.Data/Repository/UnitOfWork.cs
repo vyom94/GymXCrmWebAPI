@@ -12,67 +12,21 @@ namespace CRM.Data.Repository
         private IDataContext _dataContext;
         private AppDbContext _dbContext;
         private bool _disposed;
-        private DbContextTransaction _transaction;
         private Dictionary<string, dynamic> _repositories;
 
 
-        public UnitOfWork(string connectionString)
+        public UnitOfWork(AppDbContext dbContext)
         {
-            _dataContext = new AppDbContext(connectionString);
+            _dbContext = dbContext;
             _repositories = new Dictionary<string, dynamic>();
         }
 
-
-
-        public void BeginTransaction()
+        public int SaveChanges()
         {
-            _dbContext = ((AppDbContext)_dataContext);
-            if (_dbContext.Database.CurrentTransaction.State != System.Data.ConnectionState.Open)
-                _dbContext.Database.Connection.Open();
-            _transaction = _dbContext.Database.BeginTransaction(System.Data.IsolationLevel.ReadCommitted);
+            return _dataContext.SaveChanges();
         }
-
-        public void Commit()
-        {
-            _dataContext.SaveChanges();
-            _transaction.Commit();
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        public virtual void Dispose(bool disposing)
-        {
-            if (!_disposed)
-            {
-                if (disposing)
-                {
-                    if (_dataContext != null)
-                    {
-                        _dbContext = ((AppDbContext)_dataContext);
-
-                        if (_dbContext.Database.Connection.State == System.Data.ConnectionState.Open)
-                            _dbContext.Database.Connection.Close();
-
-                        _dataContext.Dispose();
-                        _dataContext = null;
-                    }
-
-                    if (_repositories != null)
-                        _repositories = null;
-                }
-                _disposed = true;
-            }
-        }
-
         public IGenericRepository<TEntity> Repository<TEntity>() where TEntity : class, IObjectState
         {
-            if (ServiceLocator.IsLocationProviderSet)
-                return ServiceLocator.Current.GetInstance<IGenericRepository<TEntity>>();
-
             if (_repositories == null)
                 _repositories = new Dictionary<string, dynamic>();
 
@@ -88,18 +42,34 @@ namespace CRM.Data.Repository
 
             return _repositories[type];
         }
-
-        public void Rollback()
+        public virtual void Dispose(bool disposing)
         {
-            _transaction.Rollback();
+            if (!_disposed)
+            {
+                if (disposing)
+                {
+                    if (_dataContext != null)
+                    {
+                        _dbContext = ((AppDbContext)_dataContext);
+
+                        
+
+                        _dataContext.Dispose();
+                        _dataContext = null;
+                    }
+
+                    if (_repositories != null)
+                        _repositories = null;
+                }
+                _disposed = true;
+            }
         }
 
-        public int SaveChanges()
+        public void Dispose()
         {
-            return _dataContext.SaveChanges();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
-
-
         public IDataContext Context
         {
             get { return _dataContext; }

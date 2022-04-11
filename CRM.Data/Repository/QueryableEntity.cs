@@ -87,5 +87,10 @@ namespace CRM.Data.Repository
         {
             return _repository.SelectQuery(query, parameters).AsQueryable();
         }
+        public override bool Equals(object obj)
+        {
+            return obj is QueryableEntity<TEntity> entity &&
+                   EqualityComparer<GenericRepository<TEntity>>.Default.Equals(_repository, entity._repository);
+        }
     }
 }

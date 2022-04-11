@@ -43,7 +43,7 @@ namespace GymXCrmAPI
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "GymXCrmAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Pizzeria", Version = "v1" });
             });
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Settings.ConnectionString.GymXCrmDB));
@@ -83,13 +83,7 @@ namespace GymXCrmAPI
             services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUnitOfWork>();
-           
-            //services.AddScoped(typeof(IService<>), typeof(Service<>));
-            //services.AddControllers()
-            //   .AddNewtonsoftJson(options =>
-            //   {
-            //       options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-            //   });
+    
 
         }
 

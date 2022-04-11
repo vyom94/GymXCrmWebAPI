@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CRM.Models.User
 {
-    public class Users : BaseMasterEntity
+    public class Users: BaseEntity
     {
         public string UserName { get; set; }
         public string FirstName { get; set; }

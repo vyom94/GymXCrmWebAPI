@@ -12,4 +12,8 @@
     <ProjectReference Include="..\CRM.Framework\CRM.Framework.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SysConfig\" />
+  </ItemGroup>
+
 </Project>

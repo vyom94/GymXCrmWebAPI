@@ -7,7 +7,6 @@ namespace CRM.Models.Interface
    public interface IEntity
     {
         int Id { get; set; }
-        int CompanyId { get; set; }
         DateTime CreatedAt { get; set; }
         int CreatedBy { get; set; }
         DateTime? UpdatedAt { get; set; }

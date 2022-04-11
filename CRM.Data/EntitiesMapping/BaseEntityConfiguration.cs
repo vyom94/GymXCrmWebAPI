@@ -13,7 +13,6 @@ namespace CRM.Data.EntitiesMapping
         {
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id).ValueGeneratedOnAdd();
-            builder.Property(e => e.CompanyId).IsRequired().HasColumnType("smallint");
             builder.Property(e => e.CreatedBy).IsRequired().HasMaxLength(25);
             builder.Property(e => e.CreatedAt).IsRequired().HasColumnType("datetime2");
             builder.Property(e => e.UpdatedBy).HasMaxLength(25);
