@@ -73,3 +73,9 @@ C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\netcoreap
 C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\netcoreapp3.1\GymXCrmAPI.dll
 C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\netcoreapp3.1\GymXCrmAPI.pdb
 C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\obj\Debug\netcoreapp3.1\GymXCrmAPI.genruntimeconfig.cache
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\GymXCrmAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

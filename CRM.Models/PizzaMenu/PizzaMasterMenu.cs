@@ -9,6 +9,8 @@ namespace CRM.Models.PizzaMenu
     public class PizzaMasterMenu:BaseEntity
     {
         public string Name { get; set; }
+        public string Description { get; set; }
+        public string ImageUrl { get; set; }
         public ICollection<PizzaCrust> PizzaCrust { get; set; }
         public ICollection<PizzaSize> PizzaSize { get; set; }
         public ICollection<PizzaToppings> PizzaToppings { get; set; }

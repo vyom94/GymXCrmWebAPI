@@ -17,30 +17,29 @@ namespace GymXCrmAPI.Controllers
     public class MenuController : ControllerBase
     {
         private readonly IGenericRepository<PizzaMasterMenu> _pizzaMasterService;
-        private readonly IResult _result;
-        public MenuController(IGenericRepository<PizzaMasterMenu> pizzaMasterService, IResult result)
+
+        public MenuController(IGenericRepository<PizzaMasterMenu> pizzaMasterService)
         {
             _pizzaMasterService = pizzaMasterService;
-            _result = result;
+        
         }
 
         [HttpGet]
 
-        public IResult GetAll()
+        public ActionResult GetAll()
         {
-            var pizzaMaster = _pizzaMasterService.Query(x => x.Active && !x.Deleted).Include(y => y.PizzaCrust).Include(z => z.PizzaSize).Include(k => k.PizzaToppings).Select().ToList();
-            if (pizzaMaster != null)
+            var pizzaMaster = _pizzaMasterService.
+                                Query(pizza => pizza.Active)                         
+                                .Select() 
+                                .ToList();
+        
+            if (!pizzaMaster.Any())
             {
-                _result.ResultData = pizzaMaster;
-                _result.ResultStatus = HttpStatusCode.OK;
-                _result.Messsage = "Success";
+             
+                return StatusCode((int)HttpStatusCode.NoContent, pizzaMaster);
+
             }
-            else
-            {
-                _result.ResultStatus = HttpStatusCode.NoContent;
-                _result.Messsage = "failed";
-            }
-            return _result;
+            return StatusCode((int)HttpStatusCode.OK, pizzaMaster);
         }
     }
 }

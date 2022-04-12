@@ -7,25 +7,28 @@ using System.Text.RegularExpressions;
 
 namespace CRM.Models.ApiResponseModel
 {
-    public class Result : IResult
+    public class Result<T>
     {
-        private object _ResultData;
+        public T Item { get; set; }
+        public int StatusCode { get; set; }
+        public string Message { get; set; }
 
-        public string Messsage { get; set; }
+        public static Result<T> Execute(int statusCode = 200, string message = "OK") => new Result<T> { Item = default, Message = message, StatusCode = statusCode };
+        public static Result<T> Execute(T data, int statusCode = 200, string message = "OK") => new Result<T> { Item = data, Message = message, StatusCode = statusCode };
 
-        public HttpStatusCode ResultStatus { get; set; }
 
-        public object ResultData
+        private static Type typeOf(T entity)
         {
-            get { return _ResultData; }
-            set {
-                _ResultData = Regex.Unescape(JsonConvert.SerializeObject(JsonConvert.SerializeObject(value, Formatting.None,
-                          new JsonSerializerSettings
-                          {
-                              ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-                              PreserveReferencesHandling = PreserveReferencesHandling.All
-                          }))).Replace(@",\","");
-            }
+            throw new NotImplementedException();
         }
+    }
+
+    public class Result
+    {
+        public object Item { get; set; }
+        public int StatusCode { get; set; }
+        public string Message { get; set; }
+        //public static Result Execute(int statusCode = 200, string message = "OK") => new Result { Item = null, Message = message, StatusCode = statusCode };
+        public static Result Execute(int statusCode, object Item = null) => new Result { Item = Item, StatusCode = statusCode };
     }
 }

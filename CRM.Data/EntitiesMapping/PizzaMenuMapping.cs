@@ -15,6 +15,8 @@ namespace CRM.Data.EntitiesMapping
             builder.Property(e => e.CreatedBy).IsRequired().HasMaxLength(25);
             builder.Property(e => e.CreatedAt).IsRequired().HasColumnType("datetime2");
             builder.Property(e => e.UpdatedBy).HasMaxLength(25);
+            builder.Property(e => e.Description).HasMaxLength(250);
+            builder.Property(e => e.ImageUrl).HasMaxLength(250);
             builder.Property(e => e.UpdatedAt).HasColumnType("datetime2");
             builder.Property(e => e.Active).IsRequired().HasColumnType("bit");
             builder.Property(e => e.Deleted).IsRequired().HasColumnType("bit");
@@ -29,7 +31,9 @@ namespace CRM.Data.EntitiesMapping
            Active = true,
            Deleted=false,
            CreatedBy=1,
-           CreatedAt = DateTime.UtcNow
+           CreatedAt = DateTime.UtcNow,
+           Description= "Classic delight with 100% real mozzarella cheese",
+           ImageUrl= "https://images.dominos.co.in/farmhouse.png"
        },
          new PizzaMasterMenu
          {
@@ -38,7 +42,9 @@ namespace CRM.Data.EntitiesMapping
              Active = true,
              Deleted = false,
              CreatedBy = 1,
-             CreatedAt=DateTime.UtcNow
+             CreatedAt=DateTime.UtcNow,
+             Description= "Delightful combination of onion, capsicum, tomato & grilled mushroom",
+             ImageUrl= "https://images.dominos.co.in/new_veggie_paradise.jpg"
          },
          new PizzaMasterMenu
          {
@@ -47,7 +53,9 @@ namespace CRM.Data.EntitiesMapping
              Active = true,
              Deleted = false,
              CreatedBy = 1,
-             CreatedAt = DateTime.UtcNow
+             CreatedAt = DateTime.UtcNow,
+             Description= "American classic! Spicy, herbed chicken sausage on pizza",
+             ImageUrl= "https://images.dominos.co.in/new_pepper_barbeque_chicken.jpg"
          },
          new PizzaMasterMenu
          {
@@ -56,7 +64,9 @@ namespace CRM.Data.EntitiesMapping
              Active = true,
              Deleted = false,
              CreatedBy = 1,
-             CreatedAt = DateTime.UtcNow
+             CreatedAt = DateTime.UtcNow,
+             Description= "Pepper barbecue chicken for that extra zing",
+             ImageUrl= "https://images.dominos.co.in/new_peppy_paneer.jpg"
          }
 
    ); 

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using CRM.Data.Repository;
 using CRM.Framework.Repositories;
@@ -24,6 +25,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 
 namespace GymXCrmAPI
 {
@@ -41,7 +43,10 @@ namespace GymXCrmAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+
+            services.AddControllers().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Pizzeria", Version = "v1" });
@@ -59,6 +64,9 @@ namespace GymXCrmAPI
 
                                 });
             });
+
+
+
 
             string domain = $"https://{Configuration["Auth0:Domain"]}/";
             services.AddAuthentication(options =>
@@ -79,13 +87,12 @@ namespace GymXCrmAPI
             {
                 //options.AddPolicy("read:weather", policy => policy.Requirements.Add(new HasScopeRequirement("read:weather", $"https://{Configuration["Auth0:Domain"]}/")));
             });
-            services.AddSingleton<IResult, Result>();
+
 
             services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             //services.AddScoped(typeof(IService<>), typeof(Service<>));
-            services.AddScoped<IUnitOfWork  ,UnitOfWork>();
-            services.AddSingleton <IResult, Result>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         }
 
@@ -110,7 +117,7 @@ namespace GymXCrmAPI
             {
                 endpoints.MapControllers();
             });
-         
+
         }
     }
 }
