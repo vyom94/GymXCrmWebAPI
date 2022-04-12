@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace CRM.Models.ApiResponseModel
 {
@@ -17,7 +18,14 @@ namespace CRM.Models.ApiResponseModel
         public object ResultData
         {
             get { return _ResultData; }
-            set { _ResultData = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(value, Formatting.Indented, new JsonSerializerSettings { PreserveReferencesHandling = PreserveReferencesHandling.Objects })); }
+            set {
+                _ResultData = Regex.Unescape(JsonConvert.SerializeObject(JsonConvert.SerializeObject(value, Formatting.None,
+                          new JsonSerializerSettings
+                          {
+                              ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                              PreserveReferencesHandling = PreserveReferencesHandling.All
+                          }))).Replace(@",\","");
+            }
         }
     }
 }

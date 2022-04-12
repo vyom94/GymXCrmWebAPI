@@ -23,19 +23,6 @@ namespace CRM.Data.EntitiesMapping
             builder.Property(e => e.FirstName).HasMaxLength(50);
             builder.Property(e => e.LastName).HasMaxLength(150);
             builder.Property(e => e.UserName).HasMaxLength(250);
-            //builder.HasOne(a => a.).WithMany(a => a.Apparatus).HasForeignKey(a => a.ApparatusTypeId).WillCascadeOnDelete(false);
-
-            //builder.HasOne(d => d.CreatedByUser)
-            // .WithMany(p => p.CreatedOrganizations)
-            // .HasForeignKey(d => d.CreatedBy)
-            // .HasConstraintName("FK_Organization_CreatedByUser")
-            // .OnDelete(DeleteBehavior.Restrict);
-
-            //builder.HasOne(d => d.UpdatedByUser)
-            //   .WithMany(d => d.UpdatedOrganizations)
-            //   .HasForeignKey(d => d.UpdatedBy)
-            //   .HasConstraintName("FK_Organization_UpdatedUser")
-            //   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CRM.Models.Enums
 {
-    enum sizeEnum
+   public enum sizeEnum
     {
         [Description("Regular")]
         Regular = 0,

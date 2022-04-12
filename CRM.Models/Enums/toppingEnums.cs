@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CRM.Models.Enums
 {
-    enum toppingEnums
+    public enum toppingEnums
     {
         [Description("Onion")]
         Onion = 0,
@@ -20,5 +20,7 @@ namespace CRM.Models.Enums
         ChickenSausage = 4,
         [Description("Chicken Tikka")]
         ChickenTikka = 5,
+        [Description("Chilly Paneer")]
+        ChillyPaneer = 6,
     }
 }

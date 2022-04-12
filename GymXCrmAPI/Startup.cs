@@ -8,6 +8,7 @@ using CRM.Framework.Repositories;
 using CRM.Framework.Services;
 using CRM.Framework.UnitOfWork;
 using CRM.Infrastructure.Settings;
+using CRM.Models.ApiResponseModel;
 using GymXCrmAPI.Handler;
 using GymXCrmAPI.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -78,12 +79,13 @@ namespace GymXCrmAPI
             {
                 //options.AddPolicy("read:weather", policy => policy.Requirements.Add(new HasScopeRequirement("read:weather", $"https://{Configuration["Auth0:Domain"]}/")));
             });
-
+            services.AddSingleton<IResult, Result>();
 
             services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddScoped<IUnitOfWork>();
-    
+            //services.AddScoped(typeof(IService<>), typeof(Service<>));
+            services.AddScoped<IUnitOfWork  ,UnitOfWork>();
+            services.AddSingleton <IResult, Result>();
 
         }
 

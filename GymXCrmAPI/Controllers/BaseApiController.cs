@@ -11,7 +11,7 @@ namespace GymXCrmAPI.Controllers
 {
     public class BaseApiController : ControllerBase
     {
-
+   
         public IResult _result { get; set; }
 
     }

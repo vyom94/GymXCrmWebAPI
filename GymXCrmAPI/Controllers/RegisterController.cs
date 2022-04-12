@@ -15,10 +15,10 @@ namespace GymXCrmAPI.Controllers
     [ApiController]
     public class RegisterController : BaseApiController
     {
-   
-        public RegisterController()
+        private readonly IService<Users> _userService;
+        public RegisterController(IService<Users> userService)
         {
-       
+            _userService =userService;
         }
         [HttpGet]
        

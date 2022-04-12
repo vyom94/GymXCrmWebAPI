@@ -13,6 +13,6 @@ namespace CRM.Models.User
         public string LastName { get; set; }
         public string Email { get; set; }
 
-        public ICollection<CompanyUsers> CompanyUsers { get; set; }
+        //public ICollection<CompanyUsers> CompanyUsers { get; set; }
     }
 }

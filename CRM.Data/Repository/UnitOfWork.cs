@@ -18,6 +18,7 @@ namespace CRM.Data.Repository
         public UnitOfWork(AppDbContext dbContext)
         {
             _dbContext = dbContext;
+              _dataContext = dbContext;
             _repositories = new Dictionary<string, dynamic>();
         }
 

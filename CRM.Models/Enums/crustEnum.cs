@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CRM.Models.Enums
 {
-    enum crustEnum
+    public enum crustEnum
     {
         [Description("Cheese Burst")]
         CheeseBurst=0,
