@@ -1,0 +1,13 @@
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\bin\Release\netcoreapp3.1\CRM.Models.deps.json
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\bin\Release\netcoreapp3.1\CRM.Models.dll
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\bin\Release\netcoreapp3.1\CRM.Models.pdb
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\bin\Release\netcoreapp3.1\CRM.Framework.dll
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\bin\Release\netcoreapp3.1\CRM.Framework.pdb
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\obj\Release\netcoreapp3.1\CRM.Models.csproj.AssemblyReference.cache
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\obj\Release\netcoreapp3.1\CRM.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\obj\Release\netcoreapp3.1\CRM.Models.AssemblyInfoInputs.cache
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\obj\Release\netcoreapp3.1\CRM.Models.AssemblyInfo.cs
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\obj\Release\netcoreapp3.1\CRM.Models.csproj.CoreCompileInputs.cache
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\obj\Release\netcoreapp3.1\CRM.Models.csproj.CopyComplete
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\obj\Release\netcoreapp3.1\CRM.Models.dll
+C:\Users\powerserv\Documents\GitHub\GymXCrmWebAPI\CRM.Models\obj\Release\netcoreapp3.1\CRM.Models.pdb
