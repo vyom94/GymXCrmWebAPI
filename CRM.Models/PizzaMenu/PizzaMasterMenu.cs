@@ -14,5 +14,6 @@ namespace CRM.Models.PizzaMenu
         public ICollection<PizzaCrust> PizzaCrust { get; set; }
         public ICollection<PizzaSize> PizzaSize { get; set; }
         public ICollection<PizzaToppings> PizzaToppings { get; set; }
+        public ICollection<PizzaPrice> PizzaPrice { get; set; }
     }
 }

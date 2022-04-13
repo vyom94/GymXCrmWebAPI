@@ -21,8 +21,6 @@ namespace CRM.Data.EntitiesMapping
 
             builder.HasOne(d => d.PizzaMasterMenu)
                       .WithMany(p => p.PizzaCrust)
-                      .HasForeignKey(d => d.PizzaId)
-                      .HasConstraintName("FK_PizzaCrust_Master")
                       .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasData(

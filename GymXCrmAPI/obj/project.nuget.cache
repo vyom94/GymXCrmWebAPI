@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aEVvXkE2hwifhJX50AizUpNB0+pj5oPlQJdH3V1bkPJRDAB7x5YLIowrF70/q5HVdW/0NcLflfmXLQFk6zsBww==",
+  "dgSpecHash": "5kk8m+L4kfJl2CmXdyd5bodVcfWlhgc8t/2qFlbVBVyAoiLz9kfaodHb1shUBUD08NKQY/4QZ/SveK57tZ0lSQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\powerserv\\Documents\\GitHub\\GymXCrmWebAPI\\GymXCrmAPI\\GymXCrmAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\powerserv\\.nuget\\packages\\enums.net\\4.0.0\\enums.net.4.0.0.nupkg.sha512",
     "C:\\Users\\powerserv\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.4\\microsoft.aspnetcore.authentication.jwtbearer.3.1.4.nupkg.sha512",
     "C:\\Users\\powerserv\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.24\\microsoft.aspnetcore.jsonpatch.3.1.24.nupkg.sha512",
     "C:\\Users\\powerserv\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.24\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.24.nupkg.sha512",

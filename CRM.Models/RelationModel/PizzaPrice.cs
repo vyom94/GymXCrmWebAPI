@@ -6,13 +6,11 @@ using System.Text;
 
 namespace CRM.Models.RelationModel
 {
-   public class PizzaCrust: BaseEntity
+    public class PizzaPrice: BaseEntity
     {
         public virtual PizzaMasterMenu PizzaMasterMenu { get; set; }
-
         public int PizzaId { get; set; }
-        public int CrustType { get; set; }
-        public ICollection<CrustPrice> CrustPrice { get; set; }
-        
+
+        public int Price { get; set; }
     }
 }
